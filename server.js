@@ -6,11 +6,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors(
-    // {
-    //     origin: "https://dhru-quizapp.netlify.app", // Replace with the actual URL you want to allow
-    //     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
-    //     credentials: true // Allow credentials (e.g., cookies)
-    //   }
+    {
+        origin: "https://dhru-best-deals.netlify.app", // Replace with the actual URL you want to allow
+        methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+        credentials: true // Allow credentials (e.g., cookies)
+      }
 ));
 
 connectDB(); // Connect to the database
