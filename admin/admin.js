@@ -90,7 +90,7 @@ try {
 
 router.get("/admin/uploads", async (req, res) => {
     try {
-        const response = await adminuploadmodel.find({});
+        const response = await adminuploadmodel.find({}).sort({ "createdAt": -1 });
         // Send the response along with the success message
         res.status(200).json(response);
     } catch (error) {
