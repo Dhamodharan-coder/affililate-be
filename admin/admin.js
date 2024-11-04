@@ -68,14 +68,15 @@ router.post("/admin-login", async (req, res) => {
 });
 
 router.post("/admin/uploads",async(req,res)=>{
-const {image,title,price,link,category} = req.body;
+const {image,title,price,link,category,subcategory} = req.body;
 try {
     const adminupload = new adminuploadmodel({
         image: image,
         title:title,
         price:price,
         link:link,
-        category: category
+        category: category,
+        subcategory:subcategory
     })
     await adminupload.save();
 

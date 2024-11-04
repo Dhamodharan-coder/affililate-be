@@ -6,6 +6,7 @@ const adminuploadschema= new mongoose.Schema({
     price: {type:String, required:true},
     link: {type:String, required:true},
     category: {type:String, required:true},
+    subcategory: {type:String, required:true},
 },{ timestamps: true });
 
 const adminuploadmodel = mongoose.model('adminupload',adminuploadschema)
